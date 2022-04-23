@@ -1,0 +1,48 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242323;
+}
+
+.Cards{
+    perspective: 600px;
+    
+}
+
+.Card{
+    width: 300px;
+    height: 400px;
+    background: url('./maharajImage.jpg') center no-repeat;
+    background-size: cover;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    transform-style: preserve-3d; /*Apply Text 3d Effect */
+    will-change: transform;
+    transition: transform 0.5s;
+}
+
+.Card:hover{
+    transform: translateZ(15px) rotateX(10deg) rotateY(20deg);
+
+}
+
+.CardTitle{
+    font-family: 'Roboto';
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    transition: transform 0.5s;
+}
+
+.Card:hover .CardTitle{
+    transform: translateZ(100px);
+}
